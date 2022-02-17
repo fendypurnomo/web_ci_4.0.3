@@ -1,0 +1,189 @@
+/* Login, Forgot Password */
+.login,
+.forgot-password {
+	width: 375px !important;
+}
+.login h1,
+.login .h1 {
+	letter-spacing: 5px;
+}
+#eye {
+	margin-left: 305px;
+}
+@media (min-width: 576px) {
+	.login,
+	.forgot-password {
+		width: 450px !important;
+	}
+	#eye {
+		margin-left: 380px;
+	}
+}
+
+/* Navbar */
+#navbar {
+	height: 50px;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+#navbar #btnBar,
+#navbar #btnSearchCancel {
+	margin-left: -11px;
+	margin-right: 5px;
+}
+#navbar #btnBar,
+#navbar #btnSearchCancel,
+#navbar .navbar-nav .nav-item .nav-link {
+	width: 40px;
+	height: 40px;
+	padding: 0 !important;
+}
+#navbar #btnSearchCancel {
+	display: none;
+	background-color: white;
+}
+#navbar .navbar-nav .nav-item .nav-link {
+	display: -ms-flexbox !important;
+	display: flex !important;
+	-ms-flex-align: center !important;
+	align-items: center !important;
+	-ms-flex-pack: center !important;
+	justify-content: center !important;
+}
+#navbar .navbar-nav .nav-item.show #navbarDropdownMessages .fa-envelope:before {
+	content: "\f2b6";
+}
+#navbar #btnBar:focus,
+#navbar #btnSearchCancel:focus,
+#navbar .navbar-nav .nav-item .nav-link:focus {
+	color: #6c757d !important;
+	background-color: #f8f9fa;
+}
+#navbar.show-search #navbarSearch {
+	width: calc(100% - 67px) !important;
+	left: 50px;
+}
+#navbar.show-search #navbarSearch,
+#navbar.show-search #btnSearchCancel {
+	display: inline-block !important;
+	position: absolute;
+}
+#navbar.show-search #btnBar,
+#navbar.show-search .navbar-nav {
+	display: none !important;
+}
+
+/* Navbar Dropdown */
+#navbar .dropdown {
+	position: static;
+}
+#navbar .dropdown.no-arrow .dropdown-toggle::after {
+	display: none;
+}
+#navbar .dropdown .dropdown-menu {
+	width: calc(100% - 2rem);
+	right: 1rem;
+}
+#navbar .dropdown-list {
+	padding: 0;
+	overflow: hidden;
+}
+#navbar .dropdown .dropdown-body {
+	height: calc(50vh);
+}
+#navbar .navbar-nav .nav-item.dropdown .dropdown-item:active i {
+	color: #fff !important;
+}
+@media (min-width: 576px) {
+	#navbar .dropdown {
+		position: relative;
+	}
+	#navbar .dropdown .dropdown-menu {
+		width: auto;
+		right: 0;
+	}
+	#navbar .dropdown .dropdown-list {
+		width: 20rem !important;
+	}
+}
+
+/* Main */
+#navbar + .wrapper main {
+	height: calc(100vh - 50px) !important;
+	margin: 50px 0 0 0 !important;
+}
+main {
+	height: 100vh !important;
+	width: 100% !important;
+}
+main .content {
+	padding: 1rem !important;
+}
+
+/* Datatables */
+.dataTables_length label {
+	margin-bottom: 0;
+}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+	margin: 0 0 0 0.5rem;
+}
+.pagination .page-link {
+	padding: 0.25rem 0.5rem;
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+.pagination .page-item:first-child .page-link {
+	border-top-left-radius: 0.2rem;
+	border-bottom-left-radius: 0.2rem;
+}
+.pagination .page-item:last-child .page-link {
+	border-top-right-radius: 0.2rem;
+	border-bottom-right-radius: 0.2rem;
+}
+
+/* Scrollbar */
+#sidebar.sidebar-toggled .list-group {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#sidebar.sidebar-toggled .list-group {
+	scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+	scrollbar-width: thin;
+}
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar {
+	width: 7px;
+}
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+}
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+#sidebar.sidebar-toggled .list-group::-webkit-scrollbar-thumb:active {
+	background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Text Danger */
+form .text-danger {
+	font-size: 80%;
+}
+
+/* Button */
+button[name="signin"],
+button[name="signup"],
+button[name="resetpassword"] {
+	height: 48px;
+}
+.btn-w85 {
+	width: 85px;
+	padding: 0.3rem 0.5rem;
+}
+.form-control.is-invalid {
+	border-color: #dc3545;
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+	background-image: url();
+}
