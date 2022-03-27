@@ -5,7 +5,6 @@
  * ------------------------------------------------------------------------------
  * CodeIgniter command-line tools
  * ------------------------------------------------------------------------------
- *
  * The main entry point into the CLI system and allows you to run commands and
  * perform maintenance on your application. Because CodeIgniter can handle CLI
  * requests as just another web request this class mainly acts as a passthru
@@ -17,12 +16,10 @@ define('SPARKED', true);
  * ------------------------------------------------------------------------------
  * BOOTSTRAP THE APPLICATION
  * ------------------------------------------------------------------------------
- *
  * This process sets up the path constants, loads and registers our autoloader,
  * along with Composer's, loads our constants and fires up an environment-specific
  * bootstrapping.
 */
-
 // Refuse to run when called from php-cgi
 if (substr(php_sapi_name(), 0, 3) === 'cgi') {
 	die("The cli tool is not supported when running php-cgi. It needs php-cli to function!\n\n");
@@ -32,8 +29,8 @@ if (substr(php_sapi_name(), 0, 3) === 'cgi') {
 define('FCPATH', __DIR__ . '/public' . DIRECTORY_SEPARATOR);
 
 // Load our paths config file
-require 'app/Config/Paths.php';
 // ^^^ Change this line if you move your application folder
+require 'app/Config/Paths.php';
 
 $paths = new Config\Paths();
 
@@ -54,6 +51,4 @@ $console->showHeader();
 
 // Fire off the command in the main framework.
 $response = $console->run();
-if ($response->getStatusCode() >= 300) {
-	exit($response->getStatusCode());
-}
+if ($response->getStatusCode() >= 300) { exit($response->getStatusCode()); }
